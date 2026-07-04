@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model foodItem {
+  id            String @id @default(cuid())
+  name          String
+  servingSize   String
+  protein_g     Float
+  carbs_g       Float
+  calories_kcal Float
+}
