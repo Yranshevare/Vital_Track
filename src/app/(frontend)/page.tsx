@@ -166,7 +166,7 @@ export default function Page() {
     const carbMacroPct = totalMacroCal > 0 ? Math.round((carbsCal / totalMacroCal) * 100) : 0;
     const fatMacroPct = totalMacroCal > 0 ? Math.round((fatCal / totalMacroCal) * 100) : 0;
 
-    if(isLoading) return <Loading />
+    // if(isLoading) return <Loading />
 
     return (
         <main className="min-h-screen bg-background text-on-surface antialiased">
