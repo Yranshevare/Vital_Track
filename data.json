@@ -1,0 +1,219 @@
+[
+    {
+        "foodItem": "Boiled Egg",
+        "servingSize": "1 large",
+        "protein_g": 6,
+        "carbs_g": 0.5,
+        "calories_kcal": 70
+    },
+    {
+        "foodItem": "Fried Egg",
+        "servingSize": "1 large",
+        "protein_g": 6,
+        "carbs_g": 0.5,
+        "calories_kcal": 90
+    },
+    {
+        "foodItem": "Dal (cooked)",
+        "servingSize": "1 bowl (~200 g)",
+        "protein_g": 11,
+        "carbs_g": 27,
+        "calories_kcal": 200
+    },
+    {
+        "foodItem": "Rajma (cooked)",
+        "servingSize": "1 bowl (~200 g)",
+        "protein_g": 15,
+        "carbs_g": 42,
+        "calories_kcal": 275
+    },
+    {
+        "foodItem": "Sprouts (moong, mixed)",
+        "servingSize": "1 bowl (~100 g)",
+        "protein_g": 8,
+        "carbs_g": 16,
+        "calories_kcal": 110
+    },
+    {
+        "foodItem": "Peanuts",
+        "servingSize": "1 bowl (~50 g)",
+        "protein_g": 12.5,
+        "carbs_g": 9,
+        "calories_kcal": 290
+    },
+    {
+        "foodItem": "Rice (cooked)",
+        "servingSize": "1 bowl (~150 g)",
+        "protein_g": 3.5,
+        "carbs_g": 42.5,
+        "calories_kcal": 190
+    },
+    {
+        "foodItem": "Chapati",
+        "servingSize": "1 medium",
+        "protein_g": 3,
+        "carbs_g": 16.5,
+        "calories_kcal": 90
+    },
+    {
+        "foodItem": "Banana",
+        "servingSize": "1 medium",
+        "protein_g": 1,
+        "carbs_g": 26,
+        "calories_kcal": 105
+    },
+    {
+        "foodItem": "Milk",
+        "servingSize": "250 ml",
+        "protein_g": 8,
+        "carbs_g": 12,
+        "calories_kcal": 150
+    },
+    {
+        "foodItem": "Curd",
+        "servingSize": "1 bowl (~200 g)",
+        "protein_g": 9,
+        "carbs_g": 9,
+        "calories_kcal": 120
+    },
+    {
+        "foodItem": "Paneer",
+        "servingSize": "100 g",
+        "protein_g": 19,
+        "carbs_g": 3,
+        "calories_kcal": 280
+    },
+    {
+        "foodItem": "Chicken Breast",
+        "servingSize": "100 g",
+        "protein_g": 30.5,
+        "carbs_g": 0,
+        "calories_kcal": 170
+    },
+    {
+        "foodItem": "Soy Chunks (dry)",
+        "servingSize": "100 g",
+        "protein_g": 52,
+        "carbs_g": 33,
+        "calories_kcal": 345
+    },
+    {
+        "foodItem": "Oats",
+        "servingSize": "100 g",
+        "protein_g": 13,
+        "carbs_g": 66,
+        "calories_kcal": 385
+    },
+    {
+        "foodItem": "Peanut Butter",
+        "servingSize": "1 tbsp (~16 g)",
+        "protein_g": 4,
+        "carbs_g": 3,
+        "calories_kcal": 95
+    },
+    {
+        "foodItem": "Vada Pav",
+        "servingSize": "1 piece",
+        "protein_g": 7,
+        "carbs_g": 37.5,
+        "calories_kcal": 300
+    },
+    {
+        "foodItem": "Samosa",
+        "servingSize": "1 medium",
+        "protein_g": 4.5,
+        "carbs_g": 32.5,
+        "calories_kcal": 275
+    },
+    {
+        "foodItem": "Chicken Shawarma Roll",
+        "servingSize": "1 roll",
+        "protein_g": 22.5,
+        "carbs_g": 45,
+        "calories_kcal": 525
+    },
+    {
+        "foodItem": "Misal Pav",
+        "servingSize": "1 plate",
+        "protein_g": 13.5,
+        "carbs_g": 55,
+        "calories_kcal": 450
+    },
+    {
+        "foodItem": "Pav Bhaji",
+        "servingSize": "1 plate",
+        "protein_g": 9,
+        "carbs_g": 65,
+        "calories_kcal": 525
+    },
+    {
+        "foodItem": "Plain Dosa",
+        "servingSize": "1 large",
+        "protein_g": 5.5,
+        "carbs_g": 37.5,
+        "calories_kcal": 200
+    },
+    {
+        "foodItem": "Masala Dosa",
+        "servingSize": "1 large",
+        "protein_g": 8,
+        "carbs_g": 47.5,
+        "calories_kcal": 350
+    },
+    {
+        "foodItem": "Veg Biryani",
+        "servingSize": "1 plate",
+        "protein_g": 12.5,
+        "carbs_g": 90,
+        "calories_kcal": 600
+    },
+    {
+        "foodItem": "Maggi",
+        "servingSize": "1 packet",
+        "protein_g": 7.5,
+        "carbs_g": 52.5,
+        "calories_kcal": 375
+    },
+    {
+        "foodItem": "Dairy Milk (₹10, ~20 g)",
+        "servingSize": "1 bar",
+        "protein_g": 1.5,
+        "carbs_g": 13,
+        "calories_kcal": 105
+    },
+    {
+        "foodItem": "Crispello (₹10, ~18 g)",
+        "servingSize": "1 pack",
+        "protein_g": 1.5,
+        "carbs_g": 11,
+        "calories_kcal": 95
+    },
+    {
+        "foodItem": "5 Star (₹10, ~22 g)",
+        "servingSize": "1 bar",
+        "protein_g": 1.5,
+        "carbs_g": 15,
+        "calories_kcal": 105
+    },
+    {
+        "foodItem": "KitKat (₹10, ~18 g)",
+        "servingSize": "1 bar",
+        "protein_g": 1.5,
+        "carbs_g": 11,
+        "calories_kcal": 95
+    },
+    {
+        "foodItem": "Masala Corn (2 tbsp oil)",
+        "servingSize": "1 bowl (~150 g corn)",
+        "protein_g": 4.5,
+        "carbs_g": 30,
+        "calories_kcal": 380
+    },
+    {
+        "foodItem": "Veg Manchurian Chili",
+        "servingSize": "6-7 pieces (~₹40 serving)",
+        "protein_g": 5.5,
+        "carbs_g": 35,
+        "calories_kcal": 325
+    }
+]
