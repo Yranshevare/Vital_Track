@@ -1,17 +1,14 @@
 "use client";
 
-import { Input } from "@/components/ui/input";
 import UserCircle from "@/components/UserCircle";
 import { useQuery } from "@tanstack/react-query";
-import { Bell, CircleUserRound, Hamburger, Search, Trash2 } from "lucide-react";
+import {Hamburger, Search, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { foodListKey } from "../constant";
 import axios from "axios";
 import Loading from "@/components/Loading";
 import type FoodEntry from "@/Types/FoodEntry";
-
-
 
 type LoggedItem = {
     id: string;
@@ -29,9 +26,7 @@ type LoggedItem = {
 function findFoodByQuery(query: string, foodList: FoodEntry[]) {
     if (!query) return null;
     const normalized = query.trim().toLowerCase();
-    let found = foodList.find(
-        (food) => food.name.toLowerCase() === normalized || `${food.name} (${food.servingSize})`.toLowerCase() === normalized
-    );
+    let found = foodList.find((food) => food.name.toLowerCase() === normalized || `${food.name} (${food.servingSize})`.toLowerCase() === normalized);
     if (found) return found;
     found = foodList.find((food) => normalized.includes(food.name.toLowerCase()) || food.name.toLowerCase().includes(normalized));
     if (found) return found;
@@ -44,17 +39,21 @@ export default function Page() {
     const [qtyInput, setQtyInput] = useState("1");
     const [goals, setGoals] = useState({ calories: 0, protein: 0, carbs: 0, fat: 0 });
 
-    const { data: foods, isLoading, isError } = useQuery<FoodEntry[]>({
+    const {
+        data: foods,
+        isLoading,
+        isError,
+    } = useQuery<FoodEntry[]>({
         queryKey: [foodListKey],
         queryFn: async () => await axios.get("/api/foodItem").then((res) => res.data.data),
     });
 
-    
     console.log(foods);
 
     useEffect(() => {
-        const goal = JSON.parse(localStorage.getItem("VitalTrackUserGoals") ?? '{"Calories_kcal":0,"Protein_g":0,"Carbs_g":0,"fat":0}');
-        const data =  {
+        const goal = JSON.parse(localStorage.getItem("VitalTrackUserGoals") || '{"Calories_kcal":0,"Protein_g":0,"Carbs_g":0,"fat":0}');
+        console.log(goal);
+        const data = {
             calories: goal.Calories_kcal,
             protein: goal.Protein_g,
             carbs: goal.Carbs_g,
@@ -154,9 +153,9 @@ export default function Page() {
         setLoggedItems((prev) => prev.filter((item) => item.id !== id));
     };
 
-    const calPct = Math.min(100, Math.round((totals.calories / goals.calories) * 100));
-    const protPct = Math.min(100, Math.round((totals.protein / goals.protein) * 100));
-    const carbPct = Math.min(100, Math.round((totals.carbs / goals.carbs) * 100));
+    const calPct = Math.min(100, Math.round((totals.calories / goals.calories || 1) * 100));
+    const protPct = Math.min(100, Math.round((totals.protein / goals.protein || 1) * 100));
+    const carbPct = Math.min(100, Math.round((totals.carbs / goals.carbs || 1) * 100));
     const circumference = 251.2;
 
     const proteinCal = totals.protein * 4;
@@ -167,12 +166,17 @@ export default function Page() {
     const carbMacroPct = totalMacroCal > 0 ? Math.round((carbsCal / totalMacroCal) * 100) : 0;
     const fatMacroPct = totalMacroCal > 0 ? Math.round((fatCal / totalMacroCal) * 100) : 0;
 
+    if(isLoading) return <Loading />
+
     return (
         <main className="min-h-screen bg-background text-on-surface antialiased">
             <header className="bg-white/70 backdrop-blur-xl fixed top-0 w-full z-50 flex justify-between items-center px-5 md:px-10 py-4 max-w-full">
                 <div className="text-3xl md:text-4xl font-semibold text-primary tracking-tight logo-bounce will-animate">VitalTrack</div>
                 <div className="flex items-center space-x-2">
-                    <Link href="/FoodItem" className="w-8 h-8 flex justify-center items-center material-symbols-outlined text-on-surface-variant cursor-pointer">
+                    <Link
+                        href="/FoodItem"
+                        className="w-8 h-8 flex justify-center items-center material-symbols-outlined text-on-surface-variant cursor-pointer"
+                    >
                         <Hamburger />
                     </Link>
                     <span className="w-8 h-8 material-symbols-outlined text-on-surface-variant cursor-pointer">
